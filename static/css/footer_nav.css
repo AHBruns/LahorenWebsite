@@ -1,0 +1,25 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: auto;
+    transform: translateX(-50%);
+}
+nav a {
+    color: white;
+    font-size: xx-large;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    float: left;
+    margin-right: 1vmin;
+    margin-left: 1vmin;
+    padding: .5vmin;
+    transition-duration: 1s;
+}
+nav a:hover {
+    color: #051937;
+    background-color: white;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    transition-duration: 1s;
+}

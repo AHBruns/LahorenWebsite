@@ -1,17 +1,27 @@
+
+/*TODO : CLEAN THIS SHIT UP*/
+
 body, html {
     margin: 0;
     font-family: 'Roboto-Condensed', sans-serif;
     text-decoration: none;
 }
 
-a {
-    text-decoration: none;
-    color: darkslategrey;
+.page:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    box-shadow: inset 0px 0px 300px 50px rgba(0,0,0,0.75);
+    background-image: url("https://fortunedotcom.files.wordpress.com/2015/08/gettyimages-480258262.jpg");
+    background-size: cover;
 }
 
 .page {
     min-height: 100vh;
-    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+
 }
 
 .full_width {
@@ -21,18 +31,18 @@ a {
 .header {
     padding: 0;
     margin: 0;
-    background: rgba(255, 255, 255, 0.5);
     overflow: auto;
+    background-color: rgba(255,255,255,0.25);
 }
 
 .header_choice {
-    float: left;
-    width: calc(100% / 4);
+    float: right;
+    width: calc(100% / 8);
     padding-top: 2vh;
     padding-bottom: 2vh;
     text-align: center;
     font-size: x-large;
-    color: whitesmoke;
+    color: #00bf72;
 }
 .container {
     overflow: auto;
@@ -40,9 +50,13 @@ a {
     padding: 0;
     font-size: 0;
 }
+h1,h2,h3,h4,h5 {
+    font-size: medium;
+}
 
 .header_choice:hover {
     background: white;
+    transition-duration: 100ms;
 }
 
 .width_1_4 {
@@ -68,6 +82,33 @@ a {
     align-items: center;
     overflow: hidden;
 }
+
 .text {
     font-size: medium;
+}
+
+#Alex_Bruns_Label {
+    font-size: 6vmin;
+
+}
+
+.center {
+    text-align: center;
+    overflow: auto;
+    margin: auto;
+    position: relative;
+    top: 47vh;
+    transform: translateY(-50%);
+    font-family: 'Roboto', sans-serif;
+    color: #051937;
+    width: auto;
+}
+
+.close_container {
+    text-align: left;
+    width: 75vw;
+    margin-left: 12.5vw;
+    padding: 20px;
+    padding-left: 50px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }

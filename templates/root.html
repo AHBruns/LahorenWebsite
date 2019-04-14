@@ -1,26 +1,21 @@
+{% include "includes/fonts.html" %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Lahoren</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script rel="text/javascript" src="{{ url_for('static', filename='js/root.js') }}"></script>
 </head>
 <body>
     <div class="container page">
-        <div class="container full_width header">
-            <div class="header_choice"><a href="{{ url_for('wip') }}">Downloads</a></div>
-            <div class="header_choice"><a href="{{ url_for('wip') }}">About</a></div>
-            <div class="header_choice"><a href="{{ url_for('wip') }}">Contact</a></div>
-            <div class="header_choice"><a href="{{ url_for('wip') }}">Misc</a></div>
-        </div>
-        <div class="container full_width">
-            <div class="container width_1_4 left img_fill">
-                <img src="https://cdn-images-1.medium.com/max/1200/1*kkLklt7VDrMGRjHNsODJUw.png" class="normal_aspect_ratio">
-            </div>
-            <div class="container width_3_4 right text">
-                blah blah blah
+        <div class="container center">
+            <div class="close_container">
+                <h1 id="Alex_Bruns_Label">Alex Bruns: Software Engineer</h1>
             </div>
         </div>
+        {% include "includes/footer_nav.html" %}
     </div>
 </body>
 </html>
