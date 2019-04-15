@@ -17,10 +17,17 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/login', methods=["GET", "POST"])
 def do_admin_login():
-    print(request.url)
+    conn = sqlite3.connect("db.sqlite3")
+    c = conn.cursor()
+    c.execute("""SELECT * FROM Admins""")
+    admins = c.fetchall()
+    conn.close()
+    pairs = dict()
+    for admin in admins:
+        pairs[admin[0]] = admin[1]
     if request.method == "GET":
         return render_template("login.html")
-    if request.form['password'] == 'password' and request.form['username'] == 'admin':
+    if request.form['username'] in pairs.keys() and request.form['password'] == pairs[request.form['username']]:
         session['logged_in'] = True
     else:
         flash('wrong password!')
