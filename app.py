@@ -124,11 +124,6 @@ def wip():
     return render_template("noncontent/wip.html")
 
 
-@app.route("/test")
-def test():
-    return "test"
-
-
 if __name__ == "__main__":
     app.secret_key = os.urandom(24)
     app.run(port=5000)
