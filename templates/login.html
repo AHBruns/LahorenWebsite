@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lahoren | Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/noncontent_style.css') }}">
+</head>
+<body>
+    {% block body %}
+        {% if session['logged_in'] %}
+
+            You're logged in already!
+
+        {% else %}
+            <div id="response_container">
+                <div id="header">LOGIN</div>
+                <hr>
+                <div id="content">
+                    <form action="/login" method="POST" id="form">
+                        <input type="username" name="username" placeholder="Username">
+                        <input type="password" name="password" placeholder="Password">
+                        <input type="submit" value="Log in">
+                </form>
+                </div>
+            </div>
+        {% endif %}
+    {% endblock %}
+    {% include "includes/footer_nav.html" %}
+</body>
+</html>

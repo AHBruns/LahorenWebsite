@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lahoren | Downloads</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/noncontent_style.css') }}">
+
+</head>
+<body>
+    <div id="response_container">
+        <div id="header">DOWNLOADS</div>
+        <hr>
+        <div id="content">
+            <ul>
+            {% for el in dls %}
+                <li>
+                    <a href="{{ el.link }}" class="li_a">{{ el.title }}</a>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% include "includes/footer_nav.html" %}
+</body>
+</html>

@@ -32,3 +32,16 @@ hr {
     font-family: 'Roboto-Condensed', sans-serif;
     text-align: justify;
 }
+
+#form {
+    text-align: center;
+    background-color: darkslategrey;
+    padding: 5px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: white;
+}
+
+.li_a {
+    text-decoration: none;
+}
